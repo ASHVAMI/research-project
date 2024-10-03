@@ -1,0 +1,11 @@
+customer_id,age,income,product_type,previous_purchases,made_purchase
+1,25,50000,Electronics,3,1
+2,40,60000,Furniture,1,0
+3,35,45000,Electronics,0,0
+4,23,30000,Clothing,5,1
+5,50,100000,Furniture,10,1
+6,29,70000,Clothing,2,1
+7,42,85000,Electronics,8,1
+8,33,42000,Clothing,1,0
+9,26,39000,Furniture,2,0
+10,48,92000,Electronics,12,1

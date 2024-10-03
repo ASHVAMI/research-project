@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# PyCharm specific
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VSCode specific
+.vscode/
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# Data files
+data/*.csv
+data/*.tsv
+data/*.json
+
+# Output files
+output/results.csv
+output/visualizations/
+
+# OS generated files
+.DS_Store
+Thumbs.db

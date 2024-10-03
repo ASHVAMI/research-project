@@ -1,0 +1,27 @@
+import pandas as pd
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+from model import build_model
+
+def evaluate_model(model, X_test, y_test):
+    y_pred = model.predict(X_test)
+    results = {
+        'Metric': ['Accuracy', 'Precision', 'Recall', 'F1-Score'],
+        'Score': [
+            accuracy_score(y_test, y_pred),
+            precision_score(y_test, y_pred, average='weighted'),
+            recall_score(y_test, y_pred, average='weighted'),
+            f1_score(y_test, y_pred, average='weighted')
+        ]
+    }
+    return results
+
+def save_results_to_csv(results, filepath):
+    df = pd.DataFrame(results)
+    df.to_csv(filepath, index=False)
+
+if __name__ == "__main__":
+    # Assuming you have a trained model and test data ready
+    model, X_test, y_test = build_model('data/dataset.csv')
+    results = evaluate_model(model, X_test, y_test)
+    save_results_to_csv(results, 'output/results.csv')
+    print("Results saved to 'output/results.csv'")
